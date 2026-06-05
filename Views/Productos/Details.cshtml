@@ -1,0 +1,20 @@
+@model SistemaTienda.Models.Producto
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-info text-white">
+            <h4>Detalles del Producto</h4>
+        </div>
+        <div class="card-body">
+
+            <p><strong>Nombre:</strong> @Model.Nombre</p>
+            <p><strong>Talla:</strong> @Model.Talla</p>
+            <p><strong>Color:</strong> @Model.Color</p>
+            <p><strong>Precio:</strong> $@Model.Precio</p>
+
+            <a asp-action="Edit" asp-route-id="@Model.ProductoId" class="btn btn-warning">Editar</a>
+            <a asp-action="Index" class="btn btn-secondary">Volver</a>
+
+        </div>
+    </div>
+</div>

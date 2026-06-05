@@ -1,0 +1,44 @@
+@model SistemaTienda.Models.Producto
+
+@{
+    ViewData["Title"] = "Editar Producto";
+}
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-warning">
+            <h4>Editar Producto</h4>
+        </div>
+        <div class="card-body">
+
+            <form asp-action="Edit">
+                <input type="hidden" asp-for="ProductoId" />
+
+                <div class="mb-3">
+                    <label asp-for="Nombre" class="form-label"></label>
+                    <input asp-for="Nombre" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Talla" class="form-label"></label>
+                    <input asp-for="Talla" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Color" class="form-label"></label>
+                    <input asp-for="Color" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Precio" class="form-label"></label>
+                    <input asp-for="Precio" class="form-control" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+                <a asp-action="Index" class="btn btn-secondary">Volver</a>
+
+            </form>
+
+        </div>
+    </div>
+</div>

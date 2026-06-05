@@ -1,0 +1,43 @@
+@model SistemaTienda.Models.Producto
+
+@{
+    ViewData["Title"] = "Nuevo Producto";
+}
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4>Registrar Producto</h4>
+        </div>
+        <div class="card-body">
+
+            <form asp-action="Create">
+
+                <div class="mb-3">
+                    <label asp-for="Nombre" class="form-label"></label>
+                    <input asp-for="Nombre" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Talla" class="form-label"></label>
+                    <input asp-for="Talla" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Color" class="form-label"></label>
+                    <input asp-for="Color" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Precio" class="form-label"></label>
+                    <input asp-for="Precio" class="form-control" />
+                </div>
+
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <a asp-action="Index" class="btn btn-secondary">Volver</a>
+
+            </form>
+
+        </div>
+    </div>
+</div> 

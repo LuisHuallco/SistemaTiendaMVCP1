@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h1 class="display-4 fw-bold">Urban Style</h1>
+        <p class="lead text-muted">Administración de Clientes, Productos y Compras</p>
+        <hr />
+    </div>
+
+    <div class="row text-center">
+
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Clientes</h5>
+                    <p class="card-text">Gestión completa de clientes registrados.</p>
+                    <a asp-controller="Clientes" asp-action="Index" class="btn btn-primary">
+                        Ir a Clientes
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Productos</h5>
+                    <p class="card-text">Administración del catálogo de productos.</p>
+                    <a asp-controller="Productos" asp-action="Index" class="btn btn-success">
+                        Ir a Productos
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5 class="card-title">Compras</h5>
+                    <p class="card-text">Registro y control de ventas realizadas.</p>
+                    <a asp-controller="Compras" asp-action="Index" class="btn btn-warning">
+                        Ir a Compras
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

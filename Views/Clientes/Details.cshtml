@@ -1,0 +1,24 @@
+@model SistemaTienda.Models.Cliente
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-info text-white">
+            <h4>Detalles del Cliente</h4>
+        </div>
+        <div class="card-body">
+
+            <p><strong>Nombre:</strong> @Model.Nombre</p>
+            <p><strong>Apellido:</strong> @Model.Apellido</p>
+            <p><strong>Email:</strong> @Model.Email</p>
+            <p><strong>Teléfono:</strong> @Model.Telefono</p>
+
+            <a asp-action="Edit" asp-route-id="@Model.ClienteId" class="btn btn-warning">Editar</a>
+            <a asp-action="Index" class="btn btn-secondary">Volver</a>
+
+        </div>
+    </div>
+</div>

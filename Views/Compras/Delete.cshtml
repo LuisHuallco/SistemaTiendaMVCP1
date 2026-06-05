@@ -1,0 +1,23 @@
+@model SistemaTienda.Models.Compra
+
+<div class="container mt-4">
+    <div class="card shadow border-danger">
+        <div class="card-header bg-danger text-white">
+            <h4>Eliminar Compra</h4>
+        </div>
+        <div class="card-body">
+
+            <p>¿Seguro que deseas eliminar esta compra?</p>
+
+            <p><strong>@Model.Cliente.Nombre @Model.Cliente.Apellido</strong></p>
+            <p><strong>@Model.Producto.Nombre</strong></p>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="CompraId" />
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </form>
+
+        </div>
+    </div>
+</div>

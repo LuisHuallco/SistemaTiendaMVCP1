@@ -1,0 +1,26 @@
+@model SistemaTienda.Models.Cliente
+
+@{
+    ViewData["Title"] = "Eliminar Cliente";
+}
+
+<div class="container mt-4">
+    <div class="card shadow border-danger">
+        <div class="card-header bg-danger text-white">
+            <h4>Eliminar Cliente</h4>
+        </div>
+        <div class="card-body">
+
+            <p>¿Seguro que deseas eliminar este cliente?</p>
+
+            <p><strong>@Model.Nombre @Model.Apellido</strong></p>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="ClienteId" />
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </form>
+
+        </div>
+    </div>
+</div>

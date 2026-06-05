@@ -1,0 +1,41 @@
+@model SistemaTienda.Models.Compra
+
+@{
+    ViewData["Title"] = "Nueva Compra";
+}
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h4>Registrar Compra</h4>
+        </div>
+        <div class="card-body">
+
+            <form asp-action="Create">
+                <div class="mb-3">
+                    <label asp-for="ClienteId" class="form-label">Cliente</label>
+                    <select asp-for="ClienteId" asp-items="ViewBag.ClienteId" class="form-select"></select>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ProductoId" class="form-label">Producto</label>
+                    <select asp-for="ProductoId" asp-items="ViewBag.ProductoId" class="form-select"></select>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Cantidad" class="form-label"></label>
+                    <input asp-for="Cantidad" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Fecha" class="form-label"></label>
+                    <input asp-for="Fecha" class="form-control" readonly />
+                </div>
+
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <a asp-action="Index" class="btn btn-secondary">Volver</a>
+            </form>
+
+        </div>
+    </div>
+</div>

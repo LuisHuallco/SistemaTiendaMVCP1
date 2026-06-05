@@ -1,0 +1,21 @@
+@model SistemaTienda.Models.Compra
+
+<div class="container mt-4">
+    <div class="card shadow">
+        <div class="card-header bg-info text-white">
+            <h4>Detalles de la Compra</h4>
+        </div>
+        <div class="card-body">
+
+            <p><strong>Cliente:</strong> @Model.Cliente.Nombre @Model.Cliente.Apellido</p>
+            <p><strong>Producto:</strong> @Model.Producto.Nombre</p>
+            <p><strong>Fecha:</strong> @Model.Fecha</p>
+            <p><strong>Cantidad:</strong> @Model.Cantidad</p>
+            <p><strong>Total:</strong> $@Model.Total</p>
+
+            <a asp-action="Edit" asp-route-id="@Model.CompraId" class="btn btn-warning">Editar</a>
+            <a asp-action="Index" class="btn btn-secondary">Volver</a>
+
+        </div>
+    </div>
+</div>
